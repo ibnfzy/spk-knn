@@ -31,6 +31,10 @@ $routes->set404Override();
 // route since we don't have to scan directories.
 $routes->get('/', 'Home::index');
 
+$routes->group('AdminPanel', ['namespaces' => 'App\Controllers'], function ($routes) {
+    $routes->get('/', 'AdmController::index');
+});
+
 /*
  * --------------------------------------------------------------------
  * Additional Routing

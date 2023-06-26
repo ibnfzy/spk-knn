@@ -33,6 +33,18 @@ $routes->get('/', 'Home::index');
 
 $routes->group('AdminPanel', ['namespaces' => 'App\Controllers'], function ($routes) {
     $routes->get('/', 'AdmController::index');
+    $routes->get('murid', 'Murid::index');
+    $routes->get('murid/new', 'Murid::new');
+    $routes->get('murid/(:num)', 'Murid::edit/$1');
+    $routes->post('murid', 'Murid::create');
+    $routes->post('murid/(:num)', 'Murid::update/$1');
+    $routes->get('murid/delete/(:num)', 'Murid::delete/$1');
+    $routes->get('guru', 'Guru::index');
+    $routes->get('guru/new', 'Guru::new');
+    $routes->get('guru/(:num)', 'Guru::edit/$1');
+    $routes->get('guru/delete/(:num)', 'Guru::delete/$1');
+    $routes->post('guru', 'Guru::create');
+    $routes->post('guru/(:num)', 'Guru::update/$1');
 });
 
 /*

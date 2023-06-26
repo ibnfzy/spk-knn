@@ -58,7 +58,7 @@ class Guru extends BaseController
     ];
 
     if (!$this->validate($rules)) {
-      return redirect()->to(base_url('AdminPanel/guru/new'))->with('type-status', 'error')->with('dataMessage', $this->validator->getErrors());
+      return redirect()->to(base_url('AdminPanel/guru/' . $id))->with('type-status', 'error')->with('dataMessage', $this->validator->getErrors());
     }
 
     $data = [

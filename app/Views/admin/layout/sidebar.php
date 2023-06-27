@@ -14,7 +14,8 @@
         <i class="fas fa-user-alt"></i>
       </div>
       <div class="info">
-        <span class="d-block"> Alexander Pierce</a>
+        <span class="d-block">
+          <?= $_SESSION['fullname']; ?></a>
       </div>
     </div>
 

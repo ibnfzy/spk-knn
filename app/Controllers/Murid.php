@@ -12,14 +12,14 @@ class Murid extends BaseController
   {
     $this->db = \Config\Database::connect();
   }
-  
+
   public function index()
   {
     return view('admin/murid', [
       'data' => $this->db->table('murid')->get()->getResultArray()
     ]);
   }
-  
+
   public function new()
   {
     return view('admin/murid_add');
@@ -32,9 +32,9 @@ class Murid extends BaseController
       'nama' => 'required|max_length[65]',
       'kelas' => 'required|max_length[3]'
     ];
-     
+
     if (!$this->validate($rules)) {
-      return redirect()->to(base_url('AdminPanel/murid/new'))->with('type-status', 'error')->with('dataMessage',$this->validator->getErrors());
+      return redirect()->to(base_url('AdminPanel/murid/new'))->with('type-status', 'error')->with('dataMessage', $this->validator->getErrors());
     }
 
     $data = [
@@ -62,9 +62,9 @@ class Murid extends BaseController
       'nama' => 'required|max_length[65]',
       'kelas' => 'required|max_length[3]'
     ];
-     
+
     if (!$this->validate($rules)) {
-      return redirect()->to(base_url('AdminPanel/murid/'.$id))->with('type-status', 'error')->with('dataMessage',$this->validator->getErrors());
+      return redirect()->to(base_url('AdminPanel/murid/' . $id))->with('type-status', 'error')->with('dataMessage', $this->validator->getErrors());
     }
 
     $data = [
@@ -77,7 +77,7 @@ class Murid extends BaseController
 
     return redirect()->to(base_url('AdminPanel/murid'))->with('type-status', 'success')->with('message', 'Data berhasil diubah');
   }
-  
+
   public function delete($id)
   {
     $this->db->table('murid')->where('id_murid', $id)->delete();

@@ -31,6 +31,12 @@ $routes->set404Override();
 // route since we don't have to scan directories.
 $routes->get('/', 'Home::index');
 
+$routes->group('Login', ['namespaces' => 'App\Controllers'], function ($routes) {
+    $routes->get('admin', 'Login::admin');
+    $routes->get('admin/logoff', 'Login::admin_logoff');
+    $routes->post('admin', 'Login::admin_auth');
+});
+
 $routes->group('AdminPanel', ['namespaces' => 'App\Controllers'], function ($routes) {
     $routes->get('/', 'AdmController::index');
     $routes->get('murid', 'Murid::index');
@@ -45,6 +51,12 @@ $routes->group('AdminPanel', ['namespaces' => 'App\Controllers'], function ($rou
     $routes->get('guru/delete/(:num)', 'Guru::delete/$1');
     $routes->post('guru', 'Guru::create');
     $routes->post('guru/(:num)', 'Guru::update/$1');
+    $routes->get('wali', 'WaliMurid::index');
+    $routes->get('wali/new', 'WaliMurid::new');
+    $routes->get('wali/(:num)', 'WaliMurid::edit/$1');
+    $routes->get('wali/delete/(:num)', 'WaliMurid::delete/$1');
+    $routes->post('wali', 'WaliMurid::create');
+    $routes->post('wali/(:num)', 'WaliMurid::update/$1');
 });
 
 /*

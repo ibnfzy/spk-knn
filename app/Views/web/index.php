@@ -54,7 +54,7 @@
             <div class="full">
               <div class="center-desk">
                 <div class="logo">
-                  SDN Bontoramba
+                  <h1>SDN Bontoramba</h1>
                 </div>
               </div>
             </div>
@@ -65,13 +65,9 @@
                 <nav class="main-menu">
                   <ul class="menu-area-main">
                     <li class="active"> <a href="index.html">Home</a> </li>
-                    <li> <a href="about.html">About</a> </li>
-                    <li><a href="brand.html">Brand</a></li>
-                    <li><a href="special.html">Specials</a></li>
-                    <li><a href="contact.html">Contact Us</a></li>
-                    <li class="last">
-                      <a href="#"><img src="<?= base_url('') ?>images/search_icon.png" alt="icon" /></a>
-                    </li>
+                    <li> <a href="about.html">Login Admin</a> </li>
+                    <li><a href="brand.html">Login Guru</a></li>
+                    <li><a href="special.html">Login Wali Murid</a></li>
                   </ul>
                 </nav>
               </div>
@@ -228,16 +224,16 @@
   </footer>
   <!-- end footer -->
   <!-- Javascript files-->
-  <script src="<?= base_url('') ?><?= base_url('') ?>/js/jquery.min.js"></script>
-  <script src="<?= base_url('') ?><?= base_url('') ?>/js/popper.min.js"></script>
-  <script src="<?= base_url('') ?><?= base_url('') ?>/js/bootstrap.bundle.min.js"></script>
-  <script src="<?= base_url('') ?><?= base_url('') ?>/js/jquery-3.0.0.min.js"></script>
-  <script src="<?= base_url('') ?><?= base_url('') ?>/js/plugin.js"></script>
+  <script src="<?= base_url('') ?>/js/jquery.min.js"></script>
+  <script src="<?= base_url('') ?>/js/popper.min.js"></script>
+  <script src="<?= base_url('') ?>/js/bootstrap.bundle.min.js"></script>
+  <script src="<?= base_url('') ?>/js/jquery-3.0.0.min.js"></script>
+  <script src="<?= base_url('') ?>/js/plugin.js"></script>
   <!-- sidebar -->
-  <script src="<?= base_url('') ?><?= base_url('') ?>/js/jquery.mCustomScrollbar.concat.min.js"></script>
-  <script src="<?= base_url('') ?><?= base_url('') ?>/js/custom.js"></script>
+  <script src="<?= base_url('') ?>/js/jquery.mCustomScrollbar.concat.min.js"></script>
+  <script src="<?= base_url('') ?>/js/custom.js"></script>
   <!-- javascript -->
-  <script src="<?= base_url('') ?><?= base_url('') ?>/js/owl.carousel.js"></script>
+  <script src="<?= base_url('') ?>/js/owl.carousel.js"></script>
   <script src="<?= base_url('') ?>https:cdnjs.cloudflare.com/ajax/libs/fancybox/2.1.5/jquery.fancybox.min.js"></script>
   <script>
     $(document).ready(function () {

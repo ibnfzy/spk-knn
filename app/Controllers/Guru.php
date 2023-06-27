@@ -67,7 +67,7 @@ class Guru extends BaseController
       'password' => password_hash($this->request->getPost('password') ?? substr($this->request->getPost('nip'), -4), PASSWORD_BCRYPT)
     ];
 
-    $this->db->table('guru')->insert($data);
+    $this->db->table('guru')->where('id_guru', $id)->update($data);
 
     return redirect()->to(base_url('AdminPanel/guru'))->with('type-status', 'success')->with('message', 'Data berhasil diubah');
   }

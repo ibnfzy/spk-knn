@@ -16,7 +16,7 @@
     <!-- Notifications Dropdown Menu -->
 
     <li class="nav-item">
-      <a class="nav-link" href="#" role="button">
+      <a class="nav-link" href="<?= base_url('Login/admin/logoff'); ?>" role="button">
         <i class="fas fa-arrow-alt-circle-left"></i> Log Out
       </a>
     </li>

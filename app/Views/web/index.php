@@ -64,10 +64,10 @@
               <div class="limit-box">
                 <nav class="main-menu">
                   <ul class="menu-area-main">
-                    <li class="active"> <a href="index.html">Home</a> </li>
-                    <li> <a href="about.html">Login Admin</a> </li>
-                    <li><a href="brand.html">Login Guru</a></li>
-                    <li><a href="special.html">Login Wali Murid</a></li>
+                    <li class="active"> <a href="<?= base_url(''); ?>">Home</a> </li>
+                    <li> <a href="<?= base_url('AdminPanel'); ?>">Admin Panel</a> </li>
+                    <li><a href="#">Guru Panel</a></li>
+                    <li><a href="#">Wali Murid Panel</a></li>
                   </ul>
                 </nav>
               </div>

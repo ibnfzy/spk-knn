@@ -57,6 +57,12 @@ $routes->group('AdminPanel', ['namespaces' => 'App\Controllers'], function ($rou
     $routes->get('wali/delete/(:num)', 'WaliMurid::delete/$1');
     $routes->post('wali', 'WaliMurid::create');
     $routes->post('wali/(:num)', 'WaliMurid::update/$1');
+    $routes->get('kuisoner', 'Kuisoner::index');
+    $routes->post('kuisoner', 'Kuisoner::create');
+    $routes->get('kuisoner/new', 'Kuisoner::new');
+    $routes->get('kuisoner/(:num)', 'Kuisoner::edit/$1');
+    $routes->get('kuisoner/delete/(:num)', 'Kuisoner::delete/$1');
+    $routes->post('kuisoner/(:num)', 'Kuisoner::update/$1');
 });
 
 /*

@@ -51,7 +51,7 @@
         </li>
 
         <li class="nav-item">
-          <a href="#" class="nav-link">
+          <a href="<?= base_url('AdminPanel/wali'); ?>" class="nav-link">
             <i class="nav-icon fas fa-users-cog"></i>
             <p>Wali Murid</p>
           </a>
@@ -61,6 +61,27 @@
           <a href="<?= base_url('AdminPanel/murid'); ?>" class="nav-link">
             <i class="nav-icon fas fa-user-circle"></i>
             <p>Murid</p>
+          </a>
+        </li>
+
+        <li class="nav-item">
+          <a href="#" class="nav-link">
+            <i class="nav-icon fas fa-tag"></i>
+            <p>Kriteria</p>
+          </a>
+        </li>
+
+        <li class="nav-item">
+          <a href="<?= base_url('AdminPanel/kuisoner'); ?>" class="nav-link">
+            <i class="nav-icon fas fa-question-circle"></i>
+            <p>Kuisioner</p>
+          </a>
+        </li>
+
+        <li class="nav-item">
+          <a href="#" class="nav-link">
+            <i class="nav-icon fas fa-database"></i>
+            <p>Dataset</p>
           </a>
         </li>
 

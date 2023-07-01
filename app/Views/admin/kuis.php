@@ -4,16 +4,15 @@
 
 <div class="card">
   <div class="card-header">
-    <a href="<?= base_url('AdminPanel/murid/new'); ?>" class="btn btn-primary">Tambah Data</a>
+    <a href="<?= base_url('AdminPanel/kuisoner/new'); ?>" class="btn btn-primary">Tambah Data</a>
   </div>
   <div class="card-body">
     <table id='datatable' class="table table-bordered table-hover">
       <thead>
         <tr>
           <th>#</th>
-          <th>Nama Lengkap</th>
-          <th>NIS</th>
-          <th>Kelas</th>
+          <th>Jenis Pertanyaan</th>
+          <th>Pertanyaan</th>
           <th>Aksi</th>
         </tr>
       </thead>
@@ -25,18 +24,16 @@
               <?= $i; ?>
             </td>
             <td>
-              <?= $item['nama_lengkap']; ?>
+              <?= $item['jenis_pertanyaan']; ?>
             </td>
             <td>
-              <?= $item['nis']; ?>
-            </td>
-            <td>
-              <?= $item['kelas']; ?>
+              <?= $item['pertanyaan']; ?>
             </td>
             <td>
               <div class="btn-group">
-                <a class="btn btn-primary" href="<?= base_url('AdminPanel/murid/' . $item['id_murid']); ?>">Edit</a>
-                <a class="btn btn-danger" href="<?= base_url('AdminPanel/murid/delete/' . $item['id_murid']); ?>">Delete</a>
+                <a class="btn btn-primary" href="<?= base_url('AdminPanel/kuisoner/' . $item['id_kuisoner']); ?>">Edit</a>
+                <a class="btn btn-danger"
+                  href="<?= base_url('AdminPanel/kuisoner/delete/' . $item['id_kuisoner']); ?>">Delete</a>
               </div>
             </td>
           </tr>

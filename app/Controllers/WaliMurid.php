@@ -35,7 +35,7 @@ class WaliMurid extends BaseController
     ];
 
     if (!$this->validate($rules)) {
-      return redirect()->to(base_url('AdminPanel/wali_murid/new'))->with('type-status', 'error')->with('dataMessage', $this->validator->getErrors());
+      return redirect()->to(base_url('AdminPanel/wali/new'))->with('type-status', 'error')->with('dataMessage', $this->validator->getErrors());
     }
 
     $data = [
@@ -47,7 +47,7 @@ class WaliMurid extends BaseController
 
     $this->db->table('wali_murid')->insert($data);
 
-    return redirect()->to(base_url('AdminPanel/wali_murid'))->with('type-status', 'success')->with('message', 'Data berhasil ditambahkan')->with('sendWa', $this->request->getPost('nomor_hp'));
+    return redirect()->to(base_url('AdminPanel/wali'))->with('type-status', 'success')->with('message', 'Data berhasil ditambahkan')->with('sendWa', $this->request->getPost('nomor_hp'));
   }
 
   public function edit($id)
@@ -67,7 +67,7 @@ class WaliMurid extends BaseController
     ];
 
     if (!$this->validate($rules)) {
-      return redirect()->to(base_url('AdminPanel/wali_murid/' . $id))->with('type-status', 'error')->with('dataMessage', $this->validator->getErrors());
+      return redirect()->to(base_url('AdminPanel/wali/' . $id))->with('type-status', 'error')->with('dataMessage', $this->validator->getErrors());
     }
 
     $data = [
@@ -79,12 +79,12 @@ class WaliMurid extends BaseController
 
     $this->db->table('wali_murid')->where('id_wali_murid', $id)->update($data);
 
-    return redirect()->to(base_url('AdminPanel/wali_murid'))->with('type-status', 'success')->with('message', 'Data berhasil diubah')->with('sendWa', $this->request->getPost('nomor_hp'));
+    return redirect()->to(base_url('AdminPanel/wali'))->with('type-status', 'success')->with('message', 'Data berhasil diubah')->with('sendWa', $this->request->getPost('nomor_hp'));
   }
 
   public function delete($id)
   {
     $this->db->table('wali_murid')->where('id_wali_murid', $id)->delete();
-    return redirect()->to(base_url('AdminPanel/wali_murid'))->with('type-status', 'success')->with('message', 'Data berhasil dihapus');
+    return redirect()->to(base_url('AdminPanel/wali'))->with('type-status', 'success')->with('message', 'Data berhasil dihapus');
   }
 }

@@ -63,6 +63,12 @@ $routes->group('AdminPanel', ['namespaces' => 'App\Controllers'], function ($rou
     $routes->get('kuisoner/(:num)', 'Kuisoner::edit/$1');
     $routes->get('kuisoner/delete/(:num)', 'Kuisoner::delete/$1');
     $routes->post('kuisoner/(:num)', 'Kuisoner::update/$1');
+    $routes->get('kriteria', 'Kriteria::index');
+    $routes->post('kriteria', 'Kriteria::create');
+    $routes->get('kriteria/new', 'Kriteria::new');
+    $routes->get('kriteria/(:num)', 'Kriteria::edit/$1');
+    $routes->get('kriteria/delete/(:num)', 'Kriteria::delete/$1');
+    $routes->post('kriteria/(:num)', 'Kriteria::update/$1');
 });
 
 /*

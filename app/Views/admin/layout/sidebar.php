@@ -65,7 +65,7 @@
         </li>
 
         <li class="nav-item">
-          <a href="#" class="nav-link">
+          <a href="<?= base_url('AdminPanel/kriteria'); ?>" class="nav-link">
             <i class="nav-icon fas fa-tag"></i>
             <p>Kriteria</p>
           </a>

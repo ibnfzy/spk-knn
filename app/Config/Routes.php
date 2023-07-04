@@ -69,6 +69,11 @@ $routes->group('AdminPanel', ['namespaces' => 'App\Controllers'], function ($rou
     $routes->get('kriteria/(:num)', 'Kriteria::edit/$1');
     $routes->get('kriteria/delete/(:num)', 'Kriteria::delete/$1');
     $routes->post('kriteria/(:num)', 'Kriteria::update/$1');
+    $routes->get('dataset', 'Dataset::index');
+    $routes->post('dataset', 'Dataset::create');
+    $routes->get('dataset/new', 'Dataset::new');
+    $routes->get('dataset/delete/(:num)', 'Dataset::delete/$1');
+    $routes->get('dataset/reset', 'Dataset::reset');
 });
 
 /*

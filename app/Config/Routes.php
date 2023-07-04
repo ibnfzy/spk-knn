@@ -74,6 +74,7 @@ $routes->group('AdminPanel', ['namespaces' => 'App\Controllers'], function ($rou
     $routes->get('dataset/new', 'Dataset::new');
     $routes->get('dataset/delete/(:num)', 'Dataset::delete/$1');
     $routes->get('dataset/reset', 'Dataset::reset');
+    $routes->get('dataset/generate', 'Dataset::generate_dataset');
 });
 
 /*

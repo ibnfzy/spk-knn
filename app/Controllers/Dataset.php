@@ -99,4 +99,31 @@ class Dataset extends BaseController
 
     return redirect()->to(base_url('AdminPanel/dataset'))->with('type-status', 'success')->with('message', 'Data berhasil direset');
   }
+
+  public function generate_dataset()
+  {
+    $kriteria = $this->db->table('kriteria')->orderBy('RAND()')->get(1)->getRowArray();
+
+    $data = [
+      'kriteria' => $kriteria['nama_kriteria']
+    ];
+
+    $this->db->table('dataset')->insert($data);
+
+    $getLastID = $this->db->table('dataset')->select('LAST_INSERT_ID()')->get()->getRowArray();
+
+    $data_pertanyaan = [];
+    $q = 10;
+
+    for ($i = 0; $i < $q; $i++) {
+      $data_pertanyaan[] = [
+        'id_dataset' => $getLastID['id_dataset'],
+        'nilai_pertanyaan' => rand(1, 100)
+      ];
+    }
+
+    $this->db->table('dataset_detail')->insertBatch($data_pertanyaan);
+
+    return redirect()->to(base_url('AdminPanel/dataset'))->with('type-status', 'success')->with('message', 'Data berhasil ditambah');
+  }
 }

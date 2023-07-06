@@ -28,7 +28,6 @@ class Kriteria extends BaseController
   {
     $rules = [
       'nama_kriteria' => 'required|max_length[65]',
-      'bobot' => 'required|max_length[2]'
     ];
 
     if (!$this->validate($rules)) {
@@ -37,7 +36,6 @@ class Kriteria extends BaseController
 
     $data = [
       'nama_kriteria' => $this->request->getPost('nama_kriteria'),
-      'bobot' => $this->request->getPost('bobot')
     ];
 
     $this->db->table('kriteria')->insert($data);
@@ -56,7 +54,6 @@ class Kriteria extends BaseController
   {
     $rules = [
       'nama_kriteria' => 'required|max_length[65]',
-      'bobot' => 'required|max_length[2]'
     ];
 
     if (!$this->validate($rules)) {
@@ -65,7 +62,6 @@ class Kriteria extends BaseController
 
     $data = [
       'nama_kriteria' => $this->request->getPost('nama_kriteria'),
-      'bobot' => $this->request->getPost('bobot')
     ];
 
     $this->db->table('kriteria')->where('id_kriteria', $id)->update($data);

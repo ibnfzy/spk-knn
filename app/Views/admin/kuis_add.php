@@ -12,13 +12,6 @@
         <label>Pertanyaan</label>
         <textarea name="tanya" id="tanya" class="form-control"></textarea>
       </div>
-      <div class="form-group">
-        <label>Jenis Pertanyaan</label>
-        <select name="jenis" id="jenis" class="form-control">
-          <option value="Positif">1. Positif</option>
-          <option value="Negatif">2. Negatif</option>
-        </select>
-      </div>
     </div>
     <div class="card-footer">
       <button type="submit" class="btn btn-primary">Save</button>

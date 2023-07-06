@@ -79,9 +79,16 @@
         </li>
 
         <li class="nav-item">
-          <a href="#" class="nav-link">
+          <a href="<?= base_url('AdminPanel/dataset'); ?>" class="nav-link">
             <i class="nav-icon fas fa-database"></i>
             <p>Dataset</p>
+          </a>
+        </li>
+
+        <li class="nav-item">
+          <a href="<?= base_url('AdminPanel/dataset'); ?>" class="nav-link">
+            <i class="nav-icon fas fa-database"></i>
+            <p>Hitung</p>
           </a>
         </li>
 

@@ -12,10 +12,6 @@
         <label>Nama Kriteria</label>
         <input type="text" class="form-control" name="nama_kriteria">
       </div>
-      <div class="form-group">
-        <label>bobot</label>
-        <input type="text" class="form-control" name="bobot">
-      </div>
     </div>
     <div class="card-footer">
       <button type="submit" class="btn btn-primary">Save</button>

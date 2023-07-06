@@ -28,7 +28,6 @@ class Kuisoner extends BaseController
   {
     $rules = [
       'tanya' => 'required',
-      'jenis' => 'required'
     ];
 
     if (!$this->validate($rules)) {
@@ -37,7 +36,6 @@ class Kuisoner extends BaseController
 
     $data = [
       'pertanyaan' => $this->request->getPost('tanya'),
-      'jenis_pertanyaan' => $this->request->getPost('jenis')
     ];
 
     $this->db->table('kuisoner')->insert($data);
@@ -56,7 +54,6 @@ class Kuisoner extends BaseController
   {
     $rules = [
       'tanya' => 'required',
-      'jenis' => 'required'
     ];
 
     if (!$this->validate($rules)) {

@@ -12,32 +12,28 @@
         <tr>
           <th>#</th>
           <th>Nama Kriteria</th>
-          <th>Bobot</th>
           <th>Aksi</th>
         </tr>
       </thead>
       <tbody>
         <?php $i = 1; ?>
         <?php foreach ($data as $item): ?>
-        <tr>
-          <td>
-            <?= $i; ?>
-          </td>
-          <td>
-            <?= $item['nama_kriteria']; ?>
-          </td>
-          <td>
-            <?= $item['bobot']; ?>
-          </td>
-          <td>
-            <div class="btn-group">
-              <a class="btn btn-primary" href="<?= base_url('AdminPanel/kriteria/' . $item['id_kriteria']); ?>">Edit</a>
-              <a class="btn btn-danger"
-                href="<?= base_url('AdminPanel/kriteria/delete/' . $item['id_kriteria']); ?>">Delete</a>
-            </div>
-          </td>
-        </tr>
-        <?php $i++; ?>
+          <tr>
+            <td>
+              <?= $i; ?>
+            </td>
+            <td>
+              <?= $item['nama_kriteria']; ?>
+            </td>
+            <td>
+              <div class="btn-group">
+                <a class="btn btn-primary" href="<?= base_url('AdminPanel/kriteria/' . $item['id_kriteria']); ?>">Edit</a>
+                <a class="btn btn-danger"
+                  href="<?= base_url('AdminPanel/kriteria/delete/' . $item['id_kriteria']); ?>">Delete</a>
+              </div>
+            </td>
+          </tr>
+          <?php $i++; ?>
         <?php endforeach ?>
       </tbody>
     </table>

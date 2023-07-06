@@ -11,7 +11,6 @@
       <thead>
         <tr>
           <th>#</th>
-          <th>Jenis Pertanyaan</th>
           <th>Pertanyaan</th>
           <th>Aksi</th>
         </tr>
@@ -22,9 +21,6 @@
           <tr>
             <td>
               <?= $i; ?>
-            </td>
-            <td>
-              <?= $item['jenis_pertanyaan']; ?>
             </td>
             <td>
               <?= $item['pertanyaan']; ?>

@@ -21,13 +21,16 @@ class Kuisoner extends BaseController
 
   public function new()
   {
-    return view('admin/kuis_add');
+    return view('admin/kuis_add', [
+      'option' => $this->db->table('kriteria')->get()->getResultArray()
+    ]);
   }
 
   public function create()
   {
     $rules = [
       'tanya' => 'required',
+      'kriteria' => 'required',
     ];
 
     if (!$this->validate($rules)) {
@@ -36,6 +39,7 @@ class Kuisoner extends BaseController
 
     $data = [
       'pertanyaan' => $this->request->getPost('tanya'),
+      'kriteria' => $this->request->getPost('kriteria'),
     ];
 
     $this->db->table('kuisoner')->insert($data);
@@ -46,7 +50,8 @@ class Kuisoner extends BaseController
   public function edit($id)
   {
     return view('admin/kuis_edit', [
-      'data' => $this->db->table('kuisoner')->where('id_kuisoner', $id)->get()->getRowArray()
+      'data' => $this->db->table('kuisoner')->where('id_kuisoner', $id)->get()->getRowArray(),
+      'option' => $this->db->table('kriteria')->get()->getResultArray()
     ]);
   }
 
@@ -54,6 +59,7 @@ class Kuisoner extends BaseController
   {
     $rules = [
       'tanya' => 'required',
+      'kriteria' => 'required',
     ];
 
     if (!$this->validate($rules)) {
@@ -62,7 +68,7 @@ class Kuisoner extends BaseController
 
     $data = [
       'pertanyaan' => $this->request->getPost('tanya'),
-      'jenis_pertanyaan' => $this->request->getPost('jenis')
+      'kriteria' => $this->request->getPost('kriteria'),
     ];
 
     $this->db->table('kuisoner')->where('id_kuisoner', $id)->update($data);

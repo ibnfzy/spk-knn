@@ -21,9 +21,7 @@ class Dataset extends BaseController
 
   public function new()
   {
-    return view('admin/dataset_add', [
-      'option' => $this->db->table('kriteria')->get()->getResultArray()
-    ]);
+    return view('admin/dataset_add');
   }
 
   public function create()
@@ -39,43 +37,35 @@ class Dataset extends BaseController
     $data_pertanyaan = [
       [
         'id_dataset' => $getLastID['id_dataset'],
-        'nilai_pertanyaan' => $this->request->getPost('p1')
+        'bobot_atribut' => $this->request->getPost('p1')
       ],
       [
         'id_dataset' => $getLastID['id_dataset'],
-        'nilai_pertanyaan' => $this->request->getPost('p2')
+        'bobot_atribut' => $this->request->getPost('p2')
       ],
       [
         'id_dataset' => $getLastID['id_dataset'],
-        'nilai_pertanyaan' => $this->request->getPost('p3')
+        'bobot_atribut' => $this->request->getPost('p3')
       ],
       [
         'id_dataset' => $getLastID['id_dataset'],
-        'nilai_pertanyaan' => $this->request->getPost('p4')
+        'bobot_atribut' => $this->request->getPost('p4')
       ],
       [
         'id_dataset' => $getLastID['id_dataset'],
-        'nilai_pertanyaan' => $this->request->getPost('p5')
+        'bobot_atribut' => $this->request->getPost('p5')
       ],
       [
         'id_dataset' => $getLastID['id_dataset'],
-        'nilai_pertanyaan' => $this->request->getPost('p6')
+        'bobot_atribut' => $this->request->getPost('p6')
       ],
       [
         'id_dataset' => $getLastID['id_dataset'],
-        'nilai_pertanyaan' => $this->request->getPost('p7')
+        'bobot_atribut' => $this->request->getPost('p7')
       ],
       [
         'id_dataset' => $getLastID['id_dataset'],
-        'nilai_pertanyaan' => $this->request->getPost('p8')
-      ],
-      [
-        'id_dataset' => $getLastID['id_dataset'],
-        'nilai_pertanyaan' => $this->request->getPost('p9')
-      ],
-      [
-        'id_dataset' => $getLastID['id_dataset'],
-        'nilai_pertanyaan' => $this->request->getPost('p10')
+        'bobot_atribut' => $this->request->getPost('p8')
       ],
     ];
 
@@ -102,23 +92,27 @@ class Dataset extends BaseController
 
   public function generate_dataset()
   {
-    $kriteria = $this->db->table('kriteria')->orderBy('RAND()')->get(1)->getRowArray();
+    $label = [
+      'Tinggi',
+      'Sedang',
+      'Rendah'
+    ];
 
     $data = [
-      'kriteria' => $kriteria['nama_kriteria']
+      'label' => $label[array_rand($label)]
     ];
 
     $this->db->table('dataset')->insert($data);
 
-    $getLastID = $this->db->table('dataset')->select('LAST_INSERT_ID()')->get()->getRowArray();
+    $getLastID = $this->db->table('dataset')->select('LAST_INSERT_ID() as id')->get()->getRowArray();
 
     $data_pertanyaan = [];
-    $q = 10;
+    $q = 8;
 
     for ($i = 0; $i < $q; $i++) {
       $data_pertanyaan[] = [
-        'id_dataset' => $getLastID['id_dataset'],
-        'nilai_pertanyaan' => rand(1, 100)
+        'id_dataset' => $getLastID['id'],
+        'bobot_atribut' => rand(1, 100)
       ];
     }
 

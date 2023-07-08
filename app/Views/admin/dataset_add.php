@@ -9,53 +9,44 @@
   <form action="<?= base_url('AdminPanel/dataset'); ?>" method="post">
     <div class="card-body">
       <div class="form-group">
-        <label>Kriteria</label>
+        <label>Label</label>
         <select class="form-control" name="kriteria" id="kriterai">
-          <?php $i = 1; ?>
-          <?php foreach ($option as $item): ?>
-          <option value="<?= $item['nama_kriteria'] ?>"><?= $i++ ?>. <?= $item['nama_kriteria'] ?></option>
-          <?php endforeach ?>
+          <option value="Tinggi">1. Tinggi</option>
+          <option value="Sedang">2. Sedang</option>
+          <option value="Rendah">3. Rendah</option>
         </select>
       </div>
       <div class="form-group">
-        <label>Pertanyaan 1</label>
+        <label>Atribut 1</label>
         <input type="number" class="form-control" name="p1">
       </div>
       <div class="form-group">
-        <label>Pertanyaan 2</label>
+        <label>Atribut 2</label>
         <input type="number" class="form-control" name="p2">
       </div>
       <div class="form-group">
-        <label>Pertanyaan 3</label>
+        <label>Atribut 3</label>
         <input type="number" class="form-control" name="p3">
       </div>
       <div class="form-group">
-        <label>Pertanyaan 4</label>
+        <label>Atribut 4</label>
         <input type="number" class="form-control" name="p4">
       </div>
       <div class="form-group">
-        <label>Pertanyaan 5</label>
+        <label>Atribut 5</label>
         <input type="number" class="form-control" name="p5">
       </div>
       <div class="form-group">
-        <label>Pertanyaan 6</label>
+        <label>Atribut 6</label>
         <input type="number" class="form-control" name="p6">
       </div>
       <div class="form-group">
-        <label>Pertanyaan 7</label>
+        <label>Atribut 7</label>
         <input type="number" class="form-control" name="p7">
       </div>
       <div class="form-group">
-        <label>Pertanyaan 8</label>
+        <label>Atribut 8</label>
         <input type="number" class="form-control" name="p8">
-      </div>
-      <div class="form-group">
-        <label>Pertanyaan 9</label>
-        <input type="number" class="form-control" name="p9">
-      </div>
-      <div class="form-group">
-        <label>Pertanyaan 10</label>
-        <input type="number" class="form-control" name="p10">
       </div>
     </div>
     <div class="card-footer">

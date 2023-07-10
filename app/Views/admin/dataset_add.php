@@ -10,7 +10,7 @@
     <div class="card-body">
       <div class="form-group">
         <label>Label</label>
-        <select class="form-control" name="kriteria" id="kriterai">
+        <select class="form-control" name="label" id="kriterai">
           <option value="Tinggi">1. Tinggi</option>
           <option value="Sedang">2. Sedang</option>
           <option value="Rendah">3. Rendah</option>

@@ -27,7 +27,7 @@ class Dataset extends BaseController
   public function create()
   {
     $data = [
-      'kriteria' => $this->request->getPost('kriteria')
+      'label' => $this->request->getPost('label')
     ];
 
     $this->db->table('dataset')->insert($data);
@@ -36,35 +36,35 @@ class Dataset extends BaseController
 
     $data_pertanyaan = [
       [
-        'id_dataset' => $getLastID['id_dataset'],
+        'id_dataset' => $getLastID['LAST_INSERT_ID()'],
         'bobot_atribut' => $this->request->getPost('p1')
       ],
       [
-        'id_dataset' => $getLastID['id_dataset'],
+        'id_dataset' => $getLastID['LAST_INSERT_ID()'],
         'bobot_atribut' => $this->request->getPost('p2')
       ],
       [
-        'id_dataset' => $getLastID['id_dataset'],
+        'id_dataset' => $getLastID['LAST_INSERT_ID()'],
         'bobot_atribut' => $this->request->getPost('p3')
       ],
       [
-        'id_dataset' => $getLastID['id_dataset'],
+        'id_dataset' => $getLastID['LAST_INSERT_ID()'],
         'bobot_atribut' => $this->request->getPost('p4')
       ],
       [
-        'id_dataset' => $getLastID['id_dataset'],
+        'id_dataset' => $getLastID['LAST_INSERT_ID()'],
         'bobot_atribut' => $this->request->getPost('p5')
       ],
       [
-        'id_dataset' => $getLastID['id_dataset'],
+        'id_dataset' => $getLastID['LAST_INSERT_ID()'],
         'bobot_atribut' => $this->request->getPost('p6')
       ],
       [
-        'id_dataset' => $getLastID['id_dataset'],
+        'id_dataset' => $getLastID['LAST_INSERT_ID()'],
         'bobot_atribut' => $this->request->getPost('p7')
       ],
       [
-        'id_dataset' => $getLastID['id_dataset'],
+        'id_dataset' => $getLastID['LAST_INSERT_ID()'],
         'bobot_atribut' => $this->request->getPost('p8')
       ],
     ];

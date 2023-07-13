@@ -10,7 +10,7 @@
     <div class="card-body">
       <div class="form-group">
         <label>Nama Kriteria</label>
-        <input type="text" class="form-control" name="nama_kriteria">
+        <input type="text" class="form-control" name="nama_kriteria" value="<?= $data['nama_kriteria'] ?>">
       </div>
     </div>
     <div class="card-footer">

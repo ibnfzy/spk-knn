@@ -86,7 +86,7 @@
         </li>
 
         <li class="nav-item">
-          <a href="<?= base_url('AdminPanel/dataset'); ?>" class="nav-link">
+          <a href="<?= base_url('AdminPanel/uji'); ?>" class="nav-link">
             <i class="nav-icon fas fa-square-root-alt"></i>
             <p>Hitung</p>
           </a>

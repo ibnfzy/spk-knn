@@ -76,6 +76,9 @@ $routes->group('AdminPanel', ['namespaces' => 'App\Controllers'], function ($rou
     $routes->get('dataset/reset', 'Dataset::reset');
     $routes->get('dataset/generate', 'Dataset::generate_dataset');
     $routes->get('uji', 'AdmHitung::index');
+    $routes->get('uji/new', 'AdmHitung::uji_add');
+    $routes->get('uji/delete/(:any)', 'AdmHitung::uji_delete/$1');
+    $routes->post('uji', 'AdmHitung::uji_save');
 });
 
 /*

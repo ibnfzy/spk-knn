@@ -79,6 +79,7 @@ $routes->group('AdminPanel', ['namespaces' => 'App\Controllers'], function ($rou
     $routes->get('uji/new', 'AdmHitung::uji_add');
     $routes->get('uji/delete/(:any)', 'AdmHitung::uji_delete/$1');
     $routes->post('uji', 'AdmHitung::uji_save');
+    $routes->post('uji/exec', 'AdmHitung::uji_exec');
 });
 
 /*

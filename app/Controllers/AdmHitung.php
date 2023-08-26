@@ -85,4 +85,12 @@ class AdmHitung extends BaseController
 
     return redirect()->to(base_url('AdminPanel/uji'))->with('type-status', 'success')->with('message', 'Data berhasil dihapus');
   }
+
+  public function uji_exec()
+  {
+    return view('admin/uji_exec', [
+      'data' => $this->db->table('dataset')->get()->getResultArray(),
+      'k' => $this->request->getPost('k'),
+    ]);
+  }
 }

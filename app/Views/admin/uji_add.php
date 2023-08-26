@@ -41,12 +41,21 @@
           <?= $val['pertanyaan']; ?>
         </label>
         <select name="pertanyaan[<?= $node['nama_kriteria'] ?>][<?= $i ?>]" id="pertanyaan" class="form-control">
+          <?php if (fmod($i, 2) == 1): ?>
           <option selected disabled>PILIH JAWABAN</option>
-          <option value="5">1. Sangat Setuju</option>
-          <option value="4">2. Setuju</option>
-          <option value="3">3. Netral</option>
-          <option value="2">4. Tidak Setuju</option>
-          <option value="1">5. Sangat Tidak Setuju</option>
+          <option value="35">1. Sangat Setuju</option>
+          <option value="25">2. Setuju</option>
+          <option value="20">3. Netral</option>
+          <option value="15">4. Tidak Setuju</option>
+          <option value="5">5. Sangat Tidak Setuju</option>
+          <?php else: ?>
+          <option selected disabled>PILIH JAWABAN</option>
+          <option value="30">1. Sangat Setuju</option>
+          <option value="25">2. Setuju</option>
+          <option value="20">3. Netral</option>
+          <option value="15">4. Tidak Setuju</option>
+          <option value="10">5. Sangat Tidak Setuju</option>
+          <?php endif ?>
         </select>
       </div>
 

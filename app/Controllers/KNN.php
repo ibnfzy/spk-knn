@@ -5,16 +5,6 @@ use CodeIgniter\Controller;
 
 class KNN extends Controller
 {
-
-//   $dataset = array(
-//     array('atribut' => array(25, 120, 3.8), 'kelas' => 'rendah'),
-//     array('atribut' => array(30, 140, 4.2), 'kelas' => 'rendah'),
-//     array('atribut' => array(35, 160, 4.5), 'kelas' => 'sedang'),
-//     array('atribut' => array(40, 180, 4.9), 'kelas' => 'sedang'),
-//     array('atribut' => array(45, 200, 5.3), 'kelas' => 'tinggi'),
-//     // Tambahkan data lainnya...
-// );
-
   // Fungsi untuk menghitung jarak antara dua data
   function hitungJarak($data1, $data2)
   {
@@ -26,7 +16,7 @@ class KNN extends Controller
   }
 
   // Fungsi untuk melakukan prediksi dengan KNN
-  function knn($dataset, $dataBaru, $k)
+  function knn(array $dataset, array $dataBaru, int $k)
   {
     $jarak = array();
     $knn = new KNN();

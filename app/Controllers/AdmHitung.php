@@ -6,10 +6,12 @@ use App\Controllers\BaseController;
 class AdmHitung extends BaseController
 {
   protected $db;
+  protected $knn;
 
   public function __construct()
   {
     $this->db = \Config\Database::connect();
+    $this->knn = new KNN;
   }
 
   public function index()
@@ -88,9 +90,30 @@ class AdmHitung extends BaseController
 
   public function uji_exec()
   {
+    $data = $this->db->table('dataset')->get()->getResultArray();
+    $dataset = [];
+
+    foreach ($data as $item) {
+      $get = $this->db->table('dataset_detail')->where('id_dataset', $item['id_dataset'])->get()->getResultArray();
+
+      $attr = [];
+
+      foreach ($get as $node) {
+        $attr[] = (int) $node['bobot_atribut'];
+      }
+
+      $dataset[] = [
+        'atribut' => $attr,
+        'kelas' => $item['label']
+      ];
+    }
+
     return view('admin/uji_exec', [
-      'data' => $this->db->table('dataset')->get()->getResultArray(),
+      'data' => $data,
       'k' => $this->request->getPost('k'),
+      'kriteria' => $this->db->table('kriteria')->get()->getResultArray(),
+      'uji' => $this->db->table('uji_knn')->get()->getResultArray(),
+      'dataset' => $dataset
     ]);
   }
 }

@@ -3,6 +3,8 @@
 namespace Config;
 
 use App\Filters\AdminAuth;
+use App\Filters\GuruAuth;
+use App\Filters\WaliAuth;
 use CodeIgniter\Config\BaseConfig;
 use CodeIgniter\Filters\CSRF;
 use CodeIgniter\Filters\DebugToolbar;
@@ -22,7 +24,9 @@ class Filters extends BaseConfig
         'honeypot' => Honeypot::class,
         'invalidchars' => InvalidChars::class,
         'secureheaders' => SecureHeaders::class,
-        'adminauth' => AdminAuth::class
+        'adminauth' => AdminAuth::class,
+        'guruauth' => GuruAuth::class,
+        'waliauth' => WaliAuth::class
     ];
 
     /**
@@ -67,6 +71,18 @@ class Filters extends BaseConfig
             'before' => [
                 'AdminPanel/',
                 'AdminPanel/*'
+            ]
+        ],
+        'waliauth' => [
+            'before' => [
+                'WaliPanel/',
+                'WaliPanek/*'
+            ]
+        ],
+        'guruauth' => [
+            'before' => [
+                'GuruPanel/',
+                'GuruPanel/*'
             ]
         ]
     ];

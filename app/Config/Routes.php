@@ -82,6 +82,14 @@ $routes->group('AdminPanel', ['namespaces' => 'App\Controllers'], function ($rou
     $routes->post('uji/exec', 'AdmHitung::uji_exec');
 });
 
+$routes->group('WaliPanel', ['namespaces' => 'App\Constrollers'], function ($routes) {
+    $routes->get('/', 'WaliController::index');
+});
+
+$routes->group('GuruPanel', ['namespaces' => 'App\Constrollers'], function ($routes) {
+    $routes->get('/', 'GuruController::index');
+});
+
 /*
  * --------------------------------------------------------------------
  * Additional Routing

@@ -31,7 +31,7 @@ class WaliMurid extends BaseController
     $rules = [
       'id_murid' => 'required',
       'nama_wali' => 'required|max_length[65]',
-      'nomor_hp' => 'required|max_length[13]|min_length[10]'
+      'nomor_hp' => 'required|max_length[13]|min_length[10]|is_unique[wali_murid.nomor_hp]'
     ];
 
     if (!$this->validate($rules)) {

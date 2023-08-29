@@ -1,7 +1,9 @@
 <?= $this->extend('wali/base'); ?>
 
 <?= $this->section('content'); ?>
-
+<?php $db = \Config\Database::connect();
+$getMurid = $db->table('murid')->where('id_murid', $_SESSION['id_murid'])->get()->getRowArray();
+?>
 <div class="card">
   <div class="card-header">
     <button onclick="history.back()" class="btn btn-primary">Kembali</button>
@@ -11,12 +13,7 @@
       <div class="form-group">
         <label>Pilih Murid</label>
         <select name="id_murid" id="id_murid" class="form-control">
-          <option selected disabled>-- PILIH MURID --</option>
-          <?php $i = 1;
-          foreach ($murid as $item): ?>
-            <option value="<?= $item['id_murid']; ?>">
-              <?= $i++ . '. ' . $item['nama_lengkap'] . ' | NIS. ' . $item['nis']; ?></option>
-          <?php endforeach ?>
+          <option selected value="<?= $_SESSION['id__murid'] ?>"><?= $getMurid['nama_lengkap'] ?></option>
         </select>
       </div>
 

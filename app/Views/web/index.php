@@ -66,8 +66,8 @@
                   <ul class="menu-area-main">
                     <li class="active"> <a href="<?= base_url(''); ?>">Home</a> </li>
                     <li> <a href="<?= base_url('AdminPanel'); ?>">Admin Panel</a> </li>
-                    <li><a href="#">Guru Panel</a></li>
-                    <li><a href="#">Wali Murid Panel</a></li>
+                    <li><a href="<?= base_url('GuruPanel/'); ?>">Guru Panel</a></li>
+                    <li><a href="<?= base_url('WaliPanel'); ?>">Wali Murid Panel</a></li>
                   </ul>
                 </nav>
               </div>

@@ -92,56 +92,11 @@
     <div id="myCarousel" class="carousel slide banner-main" data-ride="carousel">
       <div class="carousel-inner">
         <div class="carousel-item active">
-          <img class="first-slide" src="<?= base_url('') ?>images/banner.jpg" alt="First slide">
-          <div class="container">
-            <div class="carousel-caption relative">
-              <span>All New Phones </span>
-              <h1>up to 25% Flat Sale</h1>
-              <p>It is a long established fact that a reader will be distracted by the readable content
-                <br> of a page when looking at its layout. The point of using Lorem Ipsum is that
-              </p>
-              <a class="buynow" href="#">Buy Now</a>
-              <ul class="social_icon">
-                <li> <a href="#"><i class="fa fa-facebook-f"></i></a></li>
-                <li> <a href="#"><i class="fa fa-twitter"></i></a></li>
-                <li> <a href="#"><i class="fa fa-instagram"></i></a></li>
-              </ul>
-            </div>
-          </div>
-        </div>
-        <div class="carousel-item">
-          <img class="second-slide" src="<?= base_url('') ?>images/banner.jpg" alt="Second slide">
-          <div class="container">
-            <div class="carousel-caption relative">
-              <span>All New Phones </span>
-              <h1>up to 25% Flat Sale</h1>
-              <p>It is a long established fact that a reader will be distracted by the readable content
-                <br> of a page when looking at its layout. The point of using Lorem Ipsum is that
-              </p>
-              <a class="buynow" href="#">Buy Now</a>
-              <ul class="social_icon">
-                <li> <a href="#"><i class="fa fa-facebook-f"></i></a></li>
-                <li> <a href="#"><i class="fa fa-twitter"></i></a></li>
-                <li> <a href="#"><i class="fa fa-instagram"></i></a></li>
-              </ul>
-            </div>
-          </div>
-        </div>
-        <div class="carousel-item">
           <img class="third-slide" src="<?= base_url('') ?>images/banner.jpg" alt="Third slide">
           <div class="container">
             <div class="carousel-caption relative">
-              <span>All New Phones </span>
-              <h1>up to 25% Flat Sale</h1>
-              <p>It is a long established fact that a reader will be distracted by the readable content
-                <br> of a page when looking at its layout. The point of using Lorem Ipsum is that
-              </p>
-              <a class="buynow" href="#">Buy Now</a>
-              <ul class="social_icon">
-                <li> <a href="#"><i class="fa fa-facebook-f"></i></a></li>
-                <li> <a href="#"><i class="fa fa-twitter"></i></a></li>
-                <li> <a href="#"><i class="fa fa-instagram"></i></a></li>
-              </ul>
+              <span>Selamat Datang di website SPK KNN</span>
+              <h1>SDN Bontoramba</h1>
             </div>
           </div>
         </div>
@@ -161,17 +116,19 @@
       <div class="row">
         <div class="col-xl-5 col-lg-5 col-md-5 co-sm-l2">
           <div class="about_img">
-            <figure><img src="<?= base_url('') ?>images/about.png" alt="img" /></figure>
+            <!-- <figure><img src="<?= base_url('') ?>images/about.png" alt="img" /></figure> -->
           </div>
         </div>
         <div class="col-xl-7 col-lg-7 col-md-7 co-sm-l2">
           <div class="about_box">
-            <h3>About Us</h3>
-            <span>Our Mobile Shop</span>
-            <p>It is a long established fact that a reader will be distracted by the readable content of a page when
-              looking at its layout. The point of It is a long established fact that a reader will be distracted by the
-              readable content of a page when looking at its layout. The point of It is a long established fact that a
-              reader will be distracted by the </p>
+            <h3>Tentang Web SPK KNN ini</h3>
+            <!-- <span>Our Mobile Shop</span> -->
+            <p>Website Sistem Pendukung Keputusan (SPK) dengan algoritma KNN pada Sekolah Dasar Negeri Bontoramba
+              memiliki peran penting dalam membantu proses pengambilan keputusan di sekolah tersebut. Melalui website
+              ini, para pengambil keputusan di sekolah dapat dengan mudah menganalisis data dan informasi terkait, serta
+              mengaplikasikan algoritma KNN untuk membantu menentukan keputusan yang tepat, seperti penempatan siswa
+              dalam kelas berdasarkan faktor-faktor tertentu. Dengan demikian, website SPK ini membantu mengoptimalkan
+              efisiensi pengambilan keputusan dan penempatan di Sekolah Dasar Negeri Bontoramba.</p>
 
           </div>
 
@@ -181,43 +138,13 @@
   </div>
   <!-- end about -->
 
+  <hr>
   <!-- footer -->
   <footer>
     <div id="contact" class="footer">
-      <div class="container">
-        <div class="row pdn-top-30">
-          <div class="col-md-12 ">
-            <div class="footer-box">
-              <div class="headinga">
-                <h3>Address</h3>
-                <span>Healing Center, 176 W Streetname,New York, NY 10014, US</span>
-                <p>(+71) 8522369417
-                  <br>demo@gmail.com
-                </p>
-              </div>
-              <ul class="location_icon">
-                <li> <a href="#"><i class="fa fa-facebook-f"></i></a></li>
-                <li> <a href="#"><i class="fa fa-twitter"></i></a></li>
-                <li> <a href="#"><i class="fa fa-instagram"></i></a></li>
-
-              </ul>
-              <div class="menu-bottom">
-                <ul class="link">
-                  <li> <a href="#">Home</a></li>
-                  <li> <a href="#">About</a></li>
-
-                  <li> <a href="#">Brand </a></li>
-                  <li> <a href="#">Specials </a></li>
-                  <li> <a href="#"> Contact us</a></li>
-                </ul>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
       <div class="copyright">
         <div class="container">
-          <p>© 2019 All Rights Reserved. Design By<a href="https://html.design/"> Free Html Templates</a></p>
+          <p>JULTDEV</p>
         </div>
       </div>
     </div>

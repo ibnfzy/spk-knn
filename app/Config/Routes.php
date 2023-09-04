@@ -38,9 +38,9 @@ $routes->group('Login', ['namespaces' => 'App\Controllers'], function ($routes) 
     $routes->get('guru', 'GuruLogin::index');
     $routes->get('guru/logoff', 'GuruLogin::logoff');
     $routes->post('guru', 'GuruLogin::auth');
-    $routes->get('wali_guru', 'WaliLogin::index');
-    $routes->get('wali_guru/logoff', 'WaliLogin::logoff');
-    $routes->post('wali_guru', 'WaliLogin::auth');
+    $routes->get('wali', 'WaliLogin::index');
+    $routes->get('wali/logoff', 'WaliLogin::logoff');
+    $routes->post('wali', 'WaliLogin::auth');
 });
 
 $routes->group('AdminPanel', ['namespaces' => 'App\Controllers'], function ($routes) {

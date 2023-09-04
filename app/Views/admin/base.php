@@ -146,7 +146,9 @@
   if (session()->getFlashdata('message')) {
     echo '<script>toastr["' .
       session()->getFlashdata('type-status') . '"]("' . session()->getFlashdata('message') . '")</script>';
-    echo "window.open('https://wa.me/" . str_replace('08', '628', session()->getFlashdata('sendWa')) . "/?text=" . urlencode('Pembuatan akun wali murid SDN Bontoramba berhasil, gunakan nomor ini dan 4 digit terakhir nomor ini sebagai password awal. ' . base_url()) . "', '_blank');";
+  }
+  if (session()->getFlashdata('sendWa')) {
+    echo "<script>window.open('https://wa.me/" . str_replace('08', '628', session()->getFlashdata('sendWa')) . "/?text=" . urlencode('Pembuatan akun wali murid SDN Bontoramba berhasil, gunakan nomor ini dan 4 digit terakhir nomor ini sebagai password awal. ' . base_url()) . "', '_blank');</script>";
   }
   ?>
 

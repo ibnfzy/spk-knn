@@ -30,7 +30,7 @@ class WaliLogin extends BaseController
         if ($data) {
             $password_data = $data['password'];
 
-            $verify = password_verify($password, $password_data);
+            $verify = ($password == $password_data) ? true : false;
 
             if ($verify) {
                 $sessionData = [
@@ -38,20 +38,20 @@ class WaliLogin extends BaseController
                     'id_murid' => $data['id_murid'],
                     'nama_wali' => $data['nama_wali'],
                     'nomor_hp' => $data['nomor_hp'],
-                    'logged_in_wali_murid' => TRUE
+                    'logged_in_wali' => TRUE
                 ];
 
                 $session->set($sessionData);
                 // $session->markAsTempdata('logged_in_wali_murid', 1800); //timeout 30 menit
 
-                return redirect()->to(base_url('GuruPanel'))->with('type-status', 'info')
+                return redirect()->to(base_url('WaliPanel'))->with('type-status', 'info')
                     ->with('message', 'Selamat Datang Kembali ' . $sessionData['nama_wali']);
             } else {
-                return redirect()->to(base_url('Login/wali_murid'))->with('type-status', 'error')
+                return redirect()->to(base_url('Login/wali'))->with('type-status', 'error')
                     ->with('message', 'Password tidak benar');
             }
         } else {
-            return redirect()->to(base_url('Login/wali_murid'))->with('type-status', 'error')
+            return redirect()->to(base_url('Login/wali'))->with('type-status', 'error')
                 ->with('message', 'Nomor HP tidak benar');
         }
     }

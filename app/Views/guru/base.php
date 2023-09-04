@@ -16,7 +16,7 @@
   <link rel="stylesheet" href="<?= base_url('') ?>/plugins/datatables-responsive/css/responsive.bootstrap4.min.css">
   <link rel="stylesheet" href="<?= base_url('') ?>/plugins/datatables-buttons/css/buttons.bootstrap4.min.css">
   <!-- Theme style -->
-  <link rel="stylesheet" href="<?= base_url('') ?>/dist/css/gurulte.min.css">
+  <link rel="stylesheet" href="<?= base_url('') ?>/dist/css/adminlte.min.css">
   <link rel="stylesheet" href="<?= base_url() ?>/node_modules/sweetalert2/dist/sweetalert2.min.css">
   <link rel="stylesheet" href="<?= base_url() ?>/node_modules/toastr/build/toastr.min.css">
 </head>
@@ -94,8 +94,8 @@
   <script src="<?= base_url('') ?>/plugins/datatables-buttons/js/buttons.html5.min.js"></script>
   <script src="<?= base_url('') ?>/plugins/datatables-buttons/js/buttons.print.min.js"></script>
   <script src="<?= base_url('') ?>/plugins/datatables-buttons/js/buttons.colVis.min.js"></script>
-  <!-- guruLTE App -->
-  <script src="<?= base_url('') ?>/dist/js/gurulte.min.js"></script>
+  <!-- adminlte App -->
+  <script src="<?= base_url('') ?>/dist/js/adminlte.min.js"></script>
 
   <script>
   $(function() {

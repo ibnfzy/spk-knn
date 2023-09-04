@@ -35,7 +35,7 @@
               <?= $item['nama_murid'] ?>
             </td>
             <?php foreach ($kriteria as $node): ?>
-              <?php $getUjiKriteria = $db->table('uji_kriteria')->where('id_kriteria', $node['id_kriteria'])->get()->getRowArray(); ?>
+              <?php $getUjiKriteria = $db->table('uji_kriteria')->where('id_kriteria', $node['id_kriteria'])->where('unique_key', $item['unique_key'])->get()->getRowArray(); ?>
               <td>
                 <?= $getUjiKriteria['bobot']; ?>
               </td>

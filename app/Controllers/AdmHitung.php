@@ -61,6 +61,8 @@ class AdmHitung extends BaseController
 
     $dataKriteria = [];
 
+    // dd($this->request->getPost('pertanyaan'));
+
     foreach ($this->request->getPost('pertanyaan') as $key => $value) {
       // dd([$key => $value]);
       $getKriteria = $this->db->table('kriteria')->where('nama_kriteria', $key)->get()->getRowArray();
@@ -71,7 +73,6 @@ class AdmHitung extends BaseController
         'nama_kriteria' => $key,
         'bobot' => array_sum($value)
       ];
-
     }
 
     $this->db->table('uji_knn')->insert($dataUji);

@@ -39,9 +39,9 @@
 
 <body class="main-layout ">
   <!-- loader  -->
-  <div class="loader_bg">
+  <!-- <div class="loader_bg">
     <div class="loader"><img src="<?= base_url('') ?>images/loading.gif" alt="#" /></div>
-  </div>
+  </div> -->
   <!-- end loader -->
   <!-- header -->
   <header>
@@ -91,15 +91,21 @@
   <section class="slider_section">
     <div id="myCarousel" class="carousel slide banner-main" data-ride="carousel">
       <div class="carousel-inner">
-        <div class="carousel-item active">
-          <img class="third-slide" src="<?= base_url('') ?>images/banner.jpg" alt="Third slide">
-          <div class="container">
-            <div class="carousel-caption relative">
-              <span>Selamat Datang di website SPK KNN</span>
-              <h1>SDN Bontoramba</h1>
+        <?php
+        $getId = array_rand($corousel);
+        $getData = $corousel[$getId];
+        ?>
+        <?php foreach ($corousel as $item): ?>
+          <div class="carousel-item <?= ($getData['id_corousel'] == $item['id_corousel']) ? 'active' : ''; ?>">
+            <img class="third-slide" src="<?= base_url('uploads/' . $item['gambar']) ?>" alt="Third slide">
+            <div class="container">
+              <div class="carousel-caption relative">
+                <span>Selamat Datang di website SPK KNN</span>
+                <h1>SDN Bontoramba</h1>
+              </div>
             </div>
           </div>
-        </div>
+        <?php endforeach ?>
       </div>
       <a class="carousel-control-prev" href="#myCarousel" role="button" data-slide="prev">
         <i class='fa fa-angle-left'></i>

@@ -86,14 +86,24 @@ $routes->group('AdminPanel', ['namespaces' => 'App\Controllers'], function ($rou
     $routes->get('uji/delete/(:any)', 'AdmHitung::uji_delete/$1');
     $routes->post('uji', 'AdmHitung::uji_save');
     $routes->post('uji/exec', 'AdmHitung::uji_exec');
+    $routes->get('Corousel', 'Corousel::index');
+    $routes->post('Corousel', 'Corousel::save');
 });
 
 $routes->group('WaliPanel', ['namespaces' => 'App\Constrollers'], function ($routes) {
     $routes->get('/', 'WaliController::index');
+    $routes->get('Add', 'WaliController::uji_add');
+    $routes->post('Add', 'WaliController::uji_save');
+    $routes->get('Delete/(:num)', 'WaliController::uji_delete/$1');
+    $routes->post('Exec', 'WaliController::uji_exec');
 });
 
 $routes->group('GuruPanel', ['namespaces' => 'App\Constrollers'], function ($routes) {
     $routes->get('/', 'GuruController::index');
+    $routes->get('Add', 'GuruController::uji_add');
+    $routes->post('Add', 'GuruController::uji_save');
+    $routes->get('Delete/(:num)', 'GuruController::uji_delete/$1');
+    $routes->post('Exec', 'GuruController::uji_exec');
 });
 
 /*

@@ -4,7 +4,7 @@
 
 <div class="card">
   <div class="card-header">
-    <a href="<?= base_url('GuruPanel/uji/new'); ?>" class="btn btn-primary">Tambah Data Uji</a>
+    <a href="<?= base_url('GuruPanel/Add'); ?>" class="btn btn-primary">Tambah Data Uji</a>
     <button class="btn btn-success" data-toggle="modal" data-target="#k">Uji Data</button>
   </div>
   <div class="card-body">
@@ -14,9 +14,9 @@
           <th>#</th>
           <th>Nama Murid</th>
           <?php foreach ($kriteria as $item): ?>
-          <th>
-            <?= $item['nama_kriteria'] ?>
-          </th>
+            <th>
+              <?= $item['nama_kriteria'] ?>
+            </th>
           <?php endforeach ?>
           <th>Aksi</th>
         </tr>
@@ -27,22 +27,22 @@
         $i = 1;
         ; ?>
         <?php foreach ($data as $item): ?>
-        <tr>
-          <td>
-            <?= $i++ ?>
-          </td>
-          <td>
-            <?= $item['nama_murid'] ?>
-          </td>
-          <?php foreach ($kriteria as $node): ?>
-          <?php $getUjiKriteria = $db->table('uji_kriteria')->where('id_kriteria', $node['id_kriteria'])->get()->getRowArray(); ?>
-          <td>
-            <?= $getUjiKriteria['bobot']; ?>
-          </td>
-          <?php endforeach ?>
-          <td><a href="<?= base_url('GuruPanel/uji/delete/' . $item['unique_key']) ?>" class="btn btn-danger">Hapus
-              Data</a></td>
-        </tr>
+          <tr>
+            <td>
+              <?= $i++ ?>
+            </td>
+            <td>
+              <?= $item['nama_murid'] ?>
+            </td>
+            <?php foreach ($kriteria as $node): ?>
+              <?php $getUjiKriteria = $db->table('uji_kriteria')->where('id_kriteria', $node['id_kriteria'])->where('unique_key', $item['unique_key'])->get()->getRowArray(); ?>
+              <td>
+                <?= $getUjiKriteria['bobot']; ?>
+              </td>
+            <?php endforeach ?>
+            <td><a href="<?= base_url('AdminPanel/Delete/' . $item['unique_key']) ?>" class="btn btn-danger">Hapus
+                Data</a></td>
+          </tr>
         <?php endforeach ?>
       </tbody>
     </table>
@@ -58,7 +58,7 @@
           <span aria-hidden="true">&times;</span>
         </button>
       </div>
-      <form action="<?= base_url('GuruPanel/uji/exec') ?>" method="post">
+      <form action="<?= base_url('GuruPanel/Exec') ?>" method="post">
         <div class="modal-body">
           <input type="text" value="3" name="k" class="form-control">
         </div>

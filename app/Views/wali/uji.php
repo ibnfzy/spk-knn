@@ -4,7 +4,7 @@
 
 <div class="card">
   <div class="card-header">
-    <a href="<?= base_url('WaliPanel/uji/new'); ?>" class="btn btn-primary">Tambah Data Uji</a>
+    <a href="<?= base_url('WaliPanel/Add'); ?>" class="btn btn-primary">Tambah Data Uji</a>
     <button class="btn btn-success" data-toggle="modal" data-target="#k">Uji Data</button>
   </div>
   <div class="card-body">
@@ -35,12 +35,12 @@
             <?= $item['nama_murid'] ?>
           </td>
           <?php foreach ($kriteria as $node): ?>
-          <?php $getUjiKriteria = $db->table('uji_kriteria')->where('id_kriteria', $node['id_kriteria'])->get()->getRowArray(); ?>
+          <?php $getUjiKriteria = $db->table('uji_kriteria')->where('id_kriteria', $node['id_kriteria'])->where('unique_key', $item['unique_key'])->get()->getRowArray(); ?>
           <td>
             <?= $getUjiKriteria['bobot']; ?>
           </td>
           <?php endforeach ?>
-          <td><a href="<?= base_url('WaliPanel/uji/delete/' . $item['unique_key']) ?>" class="btn btn-danger">Hapus
+          <td><a href="<?= base_url('AdminPanel/Delete/' . $item['unique_key']) ?>" class="btn btn-danger">Hapus
               Data</a></td>
         </tr>
         <?php endforeach ?>
@@ -58,7 +58,7 @@
           <span aria-hidden="true">&times;</span>
         </button>
       </div>
-      <form action="<?= base_url('WaliPanel/uji/exec') ?>" method="post">
+      <form action="<?= base_url('WaliPanel/Exec') ?>" method="post">
         <div class="modal-body">
           <input type="text" value="3" name="k" class="form-control">
         </div>

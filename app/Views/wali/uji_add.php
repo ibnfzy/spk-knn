@@ -8,12 +8,14 @@ $getMurid = $db->table('murid')->where('id_murid', $_SESSION['id_murid'])->get()
   <div class="card-header">
     <button onclick="history.back()" class="btn btn-primary">Kembali</button>
   </div>
-  <form action="<?= base_url('WaliPanel/uji'); ?>" method="post">
+  <form action="<?= base_url('WaliPanel/Add'); ?>" method="post">
     <div class="card-body">
       <div class="form-group">
         <label>Pilih Murid</label>
         <select name="id_murid" id="id_murid" class="form-control">
-          <option selected value="<?= $_SESSION['id__murid'] ?>"><?= $getMurid['nama_lengkap'] ?></option>
+          <option selected value="<?= $_SESSION['id__murid'] ?>">
+            <?= $getMurid['nama_lengkap'] ?>
+          </option>
         </select>
       </div>
 

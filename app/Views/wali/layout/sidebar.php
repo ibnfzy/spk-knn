@@ -33,7 +33,7 @@
         </li>
 
         <li class="nav-item">
-          <a href="<?= base_url('WaliPanel'); ?>" class="nav-link">
+          <a href="<?= base_url('WaliPanel/Add'); ?>" class="nav-link">
             <i class="nav-icon fas fa-square-root-alt"></i>
             <p>Tambah Data Uji</p>
           </a>

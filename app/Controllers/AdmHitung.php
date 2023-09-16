@@ -51,7 +51,7 @@ class AdmHitung extends BaseController
 
     $getMurid = $this->db->table('murid')->where('id_murid', $this->request->getPost('id_murid'))->get()->getRowArray();
 
-    $uniqueKey = date('Ymd_H:i:s');
+    $uniqueKey = date('Ymd_H:i:s') . rand('1', '999');
 
     $dataUji = [
       'id_murid' => $this->request->getPost('id_murid'),

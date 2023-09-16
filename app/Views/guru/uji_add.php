@@ -6,7 +6,7 @@
   <div class="card-header">
     <button onclick="history.back()" class="btn btn-primary">Kembali</button>
   </div>
-  <form action="<?= base_url('GuruPanel/uji'); ?>" method="post">
+  <form action="<?= base_url('GuruPanel/Add'); ?>" method="post">
     <div class="card-body">
       <div class="form-group">
         <label>Pilih Murid</label>
@@ -15,7 +15,8 @@
           <?php $i = 1;
           foreach ($murid as $item): ?>
             <option value="<?= $item['id_murid']; ?>">
-              <?= $i++ . '. ' . $item['nama_lengkap'] . ' | NIS. ' . $item['nis']; ?></option>
+              <?= $i++ . '. ' . $item['nama_lengkap'] . ' | NIS. ' . $item['nis']; ?>
+            </option>
           <?php endforeach ?>
         </select>
       </div>

@@ -96,15 +96,15 @@
         $getData = $corousel[$getId];
         ?>
         <?php foreach ($corousel as $item): ?>
-          <div class="carousel-item <?= ($getData['id_corousel'] == $item['id_corousel']) ? 'active' : ''; ?>">
-            <img class="third-slide" src="<?= base_url('uploads/' . $item['gambar']) ?>" alt="Third slide">
-            <div class="container">
-              <div class="carousel-caption relative">
-                <span>Selamat Datang di website SPK KNN</span>
-                <h1>SDN Bontoramba</h1>
-              </div>
+        <div class="carousel-item <?= ($getData['id_corousel'] == $item['id_corousel']) ? 'active' : ''; ?>">
+          <img class="third-slide" src="<?= base_url('uploads/' . $item['gambar']) ?>" alt="Third slide">
+          <div class="container">
+            <div class="carousel-caption relative">
+              <span>Selamat Datang di website SPK KNN</span>
+              <h1>SDN Bontoramba</h1>
             </div>
           </div>
+        </div>
         <?php endforeach ?>
       </div>
       <a class="carousel-control-prev" href="#myCarousel" role="button" data-slide="prev">
@@ -169,20 +169,20 @@
   <script src="<?= base_url('') ?>/js/owl.carousel.js"></script>
   <script src="<?= base_url('') ?>https:cdnjs.cloudflare.com/ajax/libs/fancybox/2.1.5/jquery.fancybox.min.js"></script>
   <script>
-    $(document).ready(function () {
-      $(".fancybox").fancybox({
-        openEffect: "none",
-        closeEffect: "none"
-      });
-
-      $(".zoom").hover(function () {
-
-        $(this).addClass('transition');
-      }, function () {
-
-        $(this).removeClass('transition');
-      });
+  $(document).ready(function() {
+    $(".fancybox").fancybox({
+      openEffect: "none",
+      closeEffect: "none"
     });
+
+    $(".zoom").hover(function() {
+
+      $(this).addClass('transition');
+    }, function() {
+
+      $(this).removeClass('transition');
+    });
+  });
   </script>
 </body>
 

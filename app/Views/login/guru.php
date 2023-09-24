@@ -19,10 +19,12 @@
   <link rel="stylesheet" href="<?= base_url() ?>/node_modules/toastr/build/toastr.min.css">
 </head>
 
-<body class="hold-transition login-page">
+<body
+  style="background: url('<?= base_url('bg.jpg') ?>'); background-repeat: no-repeat; background-color: rgba(248,248,248,255); background-position-x: center;"
+  class="hold-transition login-page">
   <div class="login-box">
     <div class="login-logo">
-      <a href="javascript::void">Login Guru</a>
+      <a href="javascript::void" class="text-primary font-weight-bolder">Login Guru</a>
     </div>
     <!-- /.login-logo -->
     <div class="card">
@@ -77,23 +79,23 @@
   <!-- AdminLTE App -->
   <script src="<?= base_url() ?>/dist/js/adminlte.min.js"></script>
   <script>
-  toastr.options = {
-    "closeButton": true,
-    "debug": false,
-    "newestOnTop": true,
-    "progressBar": true,
-    "positionClass": "toast-top-right",
-    "preventDuplicates": true,
-    "onclick": null,
-    "showDuration": "300",
-    "hideDuration": "1000",
-    "timeOut": "5000",
-    "extendedTimeOut": "1000",
-    "showEasing": "swing",
-    "hideEasing": "linear",
-    "showMethod": "fadeIn",
-    "hideMethod": "fadeOut"
-  }
+    toastr.options = {
+      "closeButton": true,
+      "debug": false,
+      "newestOnTop": true,
+      "progressBar": true,
+      "positionClass": "toast-top-right",
+      "preventDuplicates": true,
+      "onclick": null,
+      "showDuration": "300",
+      "hideDuration": "1000",
+      "timeOut": "5000",
+      "extendedTimeOut": "1000",
+      "showEasing": "swing",
+      "hideEasing": "linear",
+      "showMethod": "fadeIn",
+      "hideMethod": "fadeOut"
+    }
   </script>
 
   <?= $this->renderSection('script'); ?>

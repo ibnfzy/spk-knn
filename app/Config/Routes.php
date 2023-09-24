@@ -88,6 +88,7 @@ $routes->group('AdminPanel', ['namespaces' => 'App\Controllers'], function ($rou
     $routes->post('uji/exec', 'AdmHitung::uji_exec');
     $routes->get('Corousel', 'Corousel::index');
     $routes->post('Corousel', 'Corousel::save');
+    $routes->get('Corousel/(:any)', 'Corousel::delete/$1');
 });
 
 $routes->group('WaliPanel', ['namespaces' => 'App\Constrollers'], function ($routes) {

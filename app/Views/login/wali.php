@@ -19,10 +19,12 @@
   <link rel="stylesheet" href="<?= base_url() ?>/node_modules/toastr/build/toastr.min.css">
 </head>
 
-<body class="hold-transition login-page">
+<body
+  style="background: url('<?= base_url('bg.jpg') ?>'); background-repeat: no-repeat; background-color: rgba(248,248,248,255); background-position-x: center;"
+  class="hold-transition login-page">
   <div class="login-box">
     <div class="login-logo">
-      <a href="javascript::void">Login Wali/Orang Tua Murid</a>
+      <a href="javascript::void" class="text-primary font-weight-bolder ">Login Wali/Orang Tua Murid</a>
     </div>
     <!-- /.login-logo -->
     <div class="card">

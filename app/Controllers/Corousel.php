@@ -44,4 +44,12 @@ class Corousel extends BaseController
         return redirect()->to(base_url('AdminPanel/Corousel'))->with('type-status', 'info')
             ->with('message', 'Data berhasil ditambahkan');
     }
+
+    public function delete($id)
+    {
+        $this->db->table('corousel')->where('id_corousel', $id)->delete();
+
+        return redirect()->to(base_url('AdminPanel/Corousel'))->with('type-status', 'info')
+            ->with('message', 'Data berhasil ditambahkan');
+    }
 }

@@ -8,7 +8,9 @@
     <!-- small card -->
     <div class="small-box bg-info">
       <div class="inner">
-        <h3>150</h3>
+        <h3>
+          <?= $siswa; ?>
+        </h3>
 
         <p>Total Siswa</p>
       </div>
@@ -23,7 +25,9 @@
     <!-- small card -->
     <div class="small-box bg-success">
       <div class="inner">
-        <h3>53<sup style="font-size: 20px">%</sup></h3>
+        <h3>
+          <?= $wali; ?>
+        </h3>
 
         <p>Total Wali Siswa</p>
       </div>
@@ -37,7 +41,9 @@
     <!-- small card -->
     <div class="small-box bg-warning">
       <div class="inner">
-        <h3>44</h3>
+        <h3>
+          <?= $guru; ?>
+        </h3>
 
         <p>Total Guru</p>
       </div>
@@ -51,7 +57,9 @@
     <!-- small card -->
     <div class="small-box bg-danger">
       <div class="inner">
-        <h3>5</h3>
+        <h3>
+          <?= $kriteria; ?>
+        </h3>
 
         <p>Total Kriteria</p>
       </div>
@@ -61,6 +69,10 @@
     </div>
   </div>
   <!-- ./col -->
+</div>
+
+<div class="col-lg-12">
+
 </div>
 
 <?= $this->endSection(); ?>

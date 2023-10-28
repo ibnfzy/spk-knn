@@ -62,6 +62,6 @@ class WaliLogin extends BaseController
 
         $session->destroy();
 
-        return redirect()->to(base_url('Login/wali_murid'));
+        return redirect()->to(base_url('Login/wali'));
     }
 }

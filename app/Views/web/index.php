@@ -97,7 +97,8 @@
         ?>
         <?php foreach ($corousel as $item): ?>
         <div class="carousel-item <?= ($getData['id_corousel'] == $item['id_corousel']) ? 'active' : ''; ?>">
-          <img class="third-slide" src="<?= base_url('uploads/' . $item['gambar']) ?>" alt="Third slide">
+          <img style="width: 100%; height: 70vh;" class="third-slide img-fluid"
+            src="<?= base_url('uploads/' . $item['gambar']) ?>" alt="Third slide">
           <div class="container">
             <div class="carousel-caption relative">
               <span>Selamat Datang di website SPK KNN</span>
@@ -107,12 +108,7 @@
         </div>
         <?php endforeach ?>
       </div>
-      <a class="carousel-control-prev" href="#myCarousel" role="button" data-slide="prev">
-        <i class='fa fa-angle-left'></i>
-      </a>
-      <a class="carousel-control-next" href="#myCarousel" role="button" data-slide="next">
-        <i class='fa fa-angle-right'></i>
-      </a>
+
     </div>
   </section>
 

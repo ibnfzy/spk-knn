@@ -32,13 +32,6 @@
         </li>
 
         <li class="nav-item">
-          <a href="<?= base_url('AdminPanel/Corousel'); ?>" class="nav-link">
-            <i class="nav-icon fas fa-image"></i>
-            <p>Corousel</p>
-          </a>
-        </li>
-
-        <li class="nav-item">
           <a href="<?= base_url('AdminPanel/guru'); ?>" class="nav-link">
             <i class="nav-icon fas fa-users"></i>
             <p>Guru</p>

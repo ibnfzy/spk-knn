@@ -20,27 +20,27 @@
         <?php $i = 1;
         $db = \Config\Database::connect(); ?>
         <?php foreach ($data as $item): ?>
-        <?php $get = $db->table('dataset_detail')->where('id_dataset', $item['id_dataset'])->get()->getResultArray();
+          <?php $get = $db->table('dataset_detail')->where('id_dataset', $item['id_dataset'])->get()->getResultArray();
           $getLength = count($get);
           $q = 1;
           ?>
-        <tr>
-          <td>
-            <?= $i; ?>
-          </td>
-          <td>
-            <?= $item['label']; ?>
-          </td>
-          <td>
-            (
-            <?php foreach ($get as $node): ?>
-            <?= ($q >= $getLength) ? $node['bobot_atribut'] : $node['bobot_atribut'] . ', ' ?>
-            <?php $q++; ?>
-            <?php endforeach ?>
-            )
-          </td>
-        </tr>
-        <?php $i++; ?>
+          <tr>
+            <td>
+              <?= $i; ?>
+            </td>
+            <td>
+              <?= $item['label']; ?>
+            </td>
+            <td>
+              (
+              <?php foreach ($get as $node): ?>
+                <?= ($q >= $getLength) ? $node['bobot_atribut'] : $node['bobot_atribut'] . ', ' ?>
+                <?php $q++; ?>
+              <?php endforeach ?>
+              )
+            </td>
+          </tr>
+          <?php $i++; ?>
         <?php endforeach ?>
       </tbody>
     </table>
@@ -58,9 +58,9 @@
           <th>#</th>
           <th>Nama Murid</th>
           <?php foreach ($kriteria as $item): ?>
-          <th>
-            <?= $item['nama_kriteria'] ?>
-          </th>
+            <th>
+              <?= $item['nama_kriteria'] ?>
+            </th>
           <?php endforeach ?>
           <th>Label</th>
         </tr>
@@ -72,32 +72,36 @@
         $i = 1;
         ; ?>
         <?php foreach ($uji as $item): ?>
-        <?php $dataBaru = []; ?>
-        <tr>
-          <td>
-            <?= $i++ ?>
-          </td>
-          <td>
-            <?= $item['nama_murid'] ?>
-          </td>
-          <?php foreach ($kriteria as $node): ?>
-          <?php
+          <?php $dataBaru = []; ?>
+          <tr>
+            <td>
+              <?= $i++ ?>
+            </td>
+            <td>
+              <?= $item['nama_murid'] ?>
+            </td>
+            <?php foreach ($kriteria as $node): ?>
+              <?php
               $getUjiKriteria = $db->table('uji_kriteria')->where('id_kriteria', $node['id_kriteria'])->where('unique_key', $item['unique_key'])->get()->getRowArray();
 
               $dataBaru[] = (int) $getUjiKriteria['bobot'];
               ?>
-          <td>
-            <?= $getUjiKriteria['bobot']; ?>
-          </td>
-          <?php endforeach ?>
-          <td>
-            <?= $knn->knn($dataset, $dataBaru, $k); ?>
-          </td>
-        </tr>
+              <td>
+                <?= $getUjiKriteria['bobot']; ?>
+              </td>
+            <?php endforeach ?>
+            <td>
+              <?= $knn->knn($dataset, $dataBaru, $k); ?>
+            </td>
+          </tr>
         <?php endforeach ?>
       </tbody>
     </table>
   </div>
 </div>
+
+<br>
+<br>
+<br>
 
 <?= $this->endSection(); ?>

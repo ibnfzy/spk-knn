@@ -19,12 +19,11 @@ class KNN extends Controller
   function knn(array $dataset, array $dataBaru, int $k)
   {
     $jarak = array();
-    $knn = new KNN();
     // Menghitung jarak antara data baru dengan setiap data dalam dataset
     foreach ($dataset as $data) {
       $jarak[] = array(
         'kelas' => $data['kelas'],
-        'jarak' => $knn->hitungJarak($data['atribut'], $dataBaru)
+        'jarak' => $this->hitungJarak($data['atribut'], $dataBaru)
       );
     }
 

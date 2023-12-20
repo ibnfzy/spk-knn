@@ -72,20 +72,54 @@ $getMurid = $db->table('murid')->where('id_murid', $_SESSION['id_murid'])->get()
           <option value="10">5. Tidak Bisa</option>
           <?php endif ?>
           <?php else : ?>
+          <?php if ($node['nama_kriteria'] == 'Berbicara') : ?>
           <?php if (fmod($i, 2) == 1) : ?>
           <option selected disabled>PILIH JAWABAN</option>
-          <option value="35">1. Sangat Setuju</option>
-          <option value="25">2. Setuju</option>
-          <option value="20">3. Netral</option>
-          <option value="15">4. Tidak Setuju</option>
-          <option value="5">5. Sangat Tidak Setuju</option>
+          <option value="35">1. Sangat Lancar</option>
+          <option value="25">2. Lancar</option>
+          <option value="20">3. Biasa</option>
+          <option value="15">4. Tidak Lancar</option>
+          <option value="5">5. Sangat Tidak Lancar</option>
           <?php else : ?>
           <option selected disabled>PILIH JAWABAN</option>
-          <option value="30">1. Sangat Setuju</option>
-          <option value="25">2. Setuju</option>
-          <option value="20">3. Netral</option>
-          <option value="15">4. Tidak Setuju</option>
-          <option value="10">5. Sangat Tidak Setuju</option>
+          <option value="30">1. Sangat Lancar</option>
+          <option value="25">2. Lancar</option>
+          <option value="20">3. Biasa</option>
+          <option value="15">4. Tidak Lancar</option>
+          <option value="10">5. Sangat Tidak Lancar</option>
+          <?php endif ?>
+          <?php elseif ($node['nama_kriteria'] == 'Membaca') : ?>
+          <?php if (fmod($i, 2) == 1) : ?>
+          <option selected disabled>PILIH JAWABAN</option>
+          <option value="35">1. Sangat Bisa</option>
+          <option value="25">2. Bisa</option>
+          <option value="20">3. Cukup Bisa</option>
+          <option value="15">4. Kurang Bisa</option>
+          <option value="5">5. Tidak Bisa</option>
+          <?php else : ?>
+          <option selected disabled>PILIH JAWABAN</option>
+          <option value="30">1. Sangat Bisa</option>
+          <option value="25">2. Bisa</option>
+          <option value="20">3. Cukup Bisa</option>
+          <option value="15">4. Kurang Bisa</option>
+          <option value="10">5. Tidak Bisa</option>
+          <?php endif ?>
+          <?php else : ?>
+          <?php if (fmod($i, 2) == 1) : ?>
+          <option selected disabled>PILIH JAWABAN</option>
+          <option value="35">1. Sangat Bisa</option>
+          <option value="25">2. Bisa</option>
+          <option value="20">3. Cukup Bisa</option>
+          <option value="15">4. Kurang Bisa</option>
+          <option value="5">5. Tidak Bisa</option>
+          <?php else : ?>
+          <option selected disabled>PILIH JAWABAN</option>
+          <option value="30">1. Sangat Bisa</option>
+          <option value="25">2. Bisa</option>
+          <option value="20">3. Cukup Bisa</option>
+          <option value="15">4. Kurang Bisa</option>
+          <option value="10">5. Tidak Bisa</option>
+          <?php endif ?>
           <?php endif ?>
           <?php endif ?>
         </select>
